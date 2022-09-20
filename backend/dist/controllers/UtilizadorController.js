@@ -13,9 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const EmailService_1 = __importDefault(require("../service/EmailService"));
-const utilizadores = [
-    { nome: "Edilson", email: "edilsoncuamba@gmail.com" }
-];
+const utilizadores = [{ nome: "Edilson", email: "edilsoncuamba@gmail.com" }];
 exports.default = {
     index(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -25,7 +23,14 @@ exports.default = {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const emailService = new EmailService_1.default();
-            emailService.sendMail({ nome: 'Edilson Alexandre Cuamba', email: 'edilsoncuamba@gmail.com' }, { subject: 'Desafio Spring Rest', body: 'Corpo' });
+            emailService.sendMail({
+                to: {
+                    nome: "Edilson Alexandre Cuamba",
+                    email: "edilsoncuamba@gmail.com",
+                },
+                message: { subject: "Desafio Spring Rest", body: "Corpo" },
+            });
+            return res.status(204).json();
         });
-    }
+    },
 };
