@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const UtilizadorController_1 = __importDefault(require("./controllers/UtilizadorController"));
 const routes = (0, express_1.Router)();
-routes.get('users', (req, res) => {
+routes.get('/users', (req, res) => {
     return UtilizadorController_1.default.index(req, res);
 });
+routes.post('/users/create', UtilizadorController_1.default.create);
 exports.default = routes;
