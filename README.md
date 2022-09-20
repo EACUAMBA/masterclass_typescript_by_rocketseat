@@ -15,4 +15,5 @@
 8. Não precisamos informar o tipo de dados sempre que declaramos uma nova var.
 9. Sempre que utilzarmos uma classe ou variavel de uma lib devemos definir o seu tipo utilizado os dois pontos : tipo;
 10. Devemos criar as nossas interface definindo os tipos de dados e etc.
+11. Podemos criar uma interface que defini metodos;
 

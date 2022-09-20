@@ -7,8 +7,18 @@ interface IMailMessage {
   body: String;
   attachment?: Array<string>;
 }
-class EmailService {
-  sendMail(to: IMailTo, message: IMailMessage) {
+
+interface IMessageDTO {
+  to: IMailTo;
+  message: IMailMessage;
+}
+
+interface IEmailSender{
+  sendMail(request: IMessageDTO): void;
+}
+
+class EmailService implements IEmailSender {
+  sendMail({ to, message }: IMessageDTO) {
     console.log(`Email enviado para ${to.nome}: ${message.subject}`);
   }
 }

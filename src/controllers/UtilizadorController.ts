@@ -9,10 +9,13 @@ export default {
   },
   async create(req: Request, res: Response) {
     const emailService = new EmailService();
-    emailService.sendMail(
-      { nome: "Edilson Alexandre Cuamba", email: "edilsoncuamba@gmail.com" },
-      { subject: "Desafio Spring Rest", body: "Corpo" }
-    );
+    emailService.sendMail({
+      to: {
+        nome: "Edilson Alexandre Cuamba",
+        email: "edilsoncuamba@gmail.com",
+      },
+      message: { subject: "Desafio Spring Rest", body: "Corpo" },
+    });
     return res.status(204).json();
   },
 };
