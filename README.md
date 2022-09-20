@@ -11,4 +11,5 @@
 4. Para conseguir fazer importação e exportação com default devemos definir uma propriedade no ficheiro de configuração do TS, tsconfig.
 5. É graças a esta propriedade que podemos importa como no JS puro, ""esModuleInterop": true,   ".
 6. Utilizando a propriedade ""outDir": "./dist", " podemos definir onde os ficheiros transpilados vão ficar.
+7. Com a biblioteca ts-node-dev, podemos definir um ambiente de desenvolvimento onde teremos hot reload log após salvarmos o ficheiro.
 
