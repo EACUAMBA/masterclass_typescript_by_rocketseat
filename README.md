@@ -9,4 +9,5 @@
 2. Devemos baixar a biblioteca de tipagens para o typescript quando utilizamos uma biblioteca externa, isso ajuda a termos highlights ao escrever código.
 3. Node não entende TypeScript, devemos utilizar o tsc para transpile código TS para JS.
 4. Para conseguir fazer importação e exportação com default devemos definir uma propriedade no ficheiro de configuração do TS, tsconfig.
+5. É graças a esta propriedade que podemos importa como no JS puro, ""esModuleInterop": true,   ".
 
